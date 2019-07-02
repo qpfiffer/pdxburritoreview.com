@@ -1,0 +1,46 @@
+/* vim: set ts=4 sw=4 noet : */
+html {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 18px;
+}
+body {
+	margin: 0 auto;
+}
+header {
+	position: absolute;
+	display: block;
+	width: 250px;
+	height: 90%;
+	border-right: 1px solid #efefef;
+}
+header ul {
+	list-style-type: none;
+}
+header ul li {
+	margin-bottom: 1em;
+}
+section {
+	margin-left: 260px;
+	margin-bottom: 6em;
+	width: 700px;
+}
+#title {
+	margin-bottom: 4em;
+}
+.bold {
+	font-weight: bold;
+}
+.important {
+	color: #ff4742;
+}
+.tx,.blog_ref {
+	margin-bottom: 2em;
+	display: block;
+}
+.author_name {
+	font-size: 14px;
+	color: #777;
+}
+#map {
+	height: 640px;
+}
