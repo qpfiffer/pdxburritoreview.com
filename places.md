@@ -25,6 +25,7 @@
     * Cha Cha Cha (Broadway)
     * El Nutri Taco (Alberta)
     * Taqueria Y Panaderia Santa Cruz ( St. Johns)
+    * Matador (Burnside)
 
 # SE
     * Los Gorditos (Division)
@@ -32,11 +33,17 @@
     * Pepper Box (Morrison)
     * ¿Por Qué No? (Hawthorne)
     * Ole Ole (Burnside)
+    * Guero (28th)
+    * Que Pasa Cantina (12th) (via Colby)
+    * La Calaca Comelona (12th) (via Colby)
+    * Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
+    * Taqueria Portland (SE 8th Ave.) (via Colby)
 
 # SW
     * Taco Bell (Barbur)
     * Jola
-    * 
+    * Tito's Burritos (6th) (via E)
+    * Mayas Taqueria (Morrison) (via E)
 
 # Downtown
     * Santeria
