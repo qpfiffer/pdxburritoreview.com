@@ -24,12 +24,14 @@
     * Baja Fresh (Hollywood)
     * Cha Cha Cha (Broadway)
     * El Nutri Taco (Alberta)
+    * Taqueria Y Panaderia Santa Cruz ( St. Johns)
 
 # SE
     * Los Gorditos (Division)
     * Robo Taco (Morrison)
     * Pepper Box (Morrison)
     * ¿Por Qué No? (Hawthorne)
+    * Ole Ole (Burnside)
 
 # SW
     * Taco Bell (Barbur)
