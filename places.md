@@ -9,6 +9,7 @@
     * El Diablito (2335 NW 23rd Pl, Portland, OR 97210)
     * Angel's Taqueria (2225 NW Wilson St)
     * Burrito Bar (Hoyt)
+    * NoBrakes Cafe (Near the Ducati dealer)
 
 # NE
     * Quesa Brosa
