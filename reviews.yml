@@ -7,95 +7,101 @@
 #    * General review text
 
 - NW:
-    - El Diablito:
-        address: "(2335 NW 23rd Pl, Portland, OR 97210)"
-        speed: 3
-        price: 3
-        tasty: 4
-        heavy: 4
-        reviews:
-            - text: >
-                A really solid option if you want a heavy burrito. They also have fantastic tortas.
-                Considering it's really one of the few places up in the NW Industrial, I really
-                recommend it. They also put these really good little potato pieces inside their
-                food and it's amazing.
-              author: QP
-    - Angel's Taqueria:
-        address: "(2225 NW Wilson St)"
-        speed: 4
-        price: 1
-        tasty: 2
-        heavy: 2
-        reviews:
-            - text: >
-                Another NW Industral staple, it kind of sucks. I think I went there once and just
-                remember the burrito being kind of soggy and the sauce being kind of lame.
-              author: QP
-    - Burrito Bar:
-        address: "(Hoyt)"
-        speed: 5
-        price: 2
-        tasty: 3
-        heavy: 3
-        reviews:
-            - text: >
-                Pearl district average. The one thing that stood out, or what I really remember, is that
-                they have their process down really well. You go from tortilla to wrapped hot burrito very
-                quickly. The cart down near the OHSU area is (was? I'm not sure it's still there) was even
-                faster.
-              author: QP
-    - NoBrakes Cafe:
-        address: "(Near Ducati Dealer)"
-        breakfast: true
-        speed: 3
-        price: 3
-        tasty: 5
-        heavy: 5
-        reviews:
-            - text: >
-                This cart moves around and is more of a coffee thing, but they have an incredibly mean
-                brisket burrito that is fantastic. Heavy as hell but very tasty.
-              author: QP
+      - El Diablito:
+            address: '(2335 NW 23rd Pl, Portland, OR 97210)'
+            speed: 3
+            price: 3
+            tasty: 4
+            heavy: 4
+            reviews:
+                - text: >
+                      A really solid option if you want a heavy burrito. They also have fantastic tortas.
+                      Considering it's really one of the few places up in the NW Industrial, I really
+                      recommend it. They also put these really good little potato pieces inside their
+                      food and it's amazing.
+                  author: QP
+      - Angel's Taqueria:
+            address: '(2225 NW Wilson St)'
+            speed: 4
+            price: 1
+            tasty: 2
+            heavy: 2
+            reviews:
+                - text: >
+                      Another NW Industral staple, it kind of sucks. I think I went there once and just
+                      remember the burrito being kind of soggy and the sauce being kind of lame.
+                  author: QP
+      - Burrito Bar:
+            address: '(Hoyt)'
+            speed: 5
+            price: 2
+            tasty: 3
+            heavy: 3
+            reviews:
+                - text: >
+                      Pearl district average. The one thing that stood out, or what I really remember, is that
+                      they have their process down really well. You go from tortilla to wrapped hot burrito very
+                      quickly. The cart down near the OHSU area is (was? I'm not sure it's still there) was even
+                      faster.
+                  author: QP
+      - NoBrakes Cafe:
+            address: '(Near Ducati Dealer)'
+            breakfast: true
+            speed: 3
+            price: 3
+            tasty: 5
+            heavy: 5
+            reviews:
+                - text: >
+                      This cart moves around and is more of a coffee thing, but they have an incredibly mean
+                      brisket burrito that is fantastic. Heavy as hell but very tasty.
+                  author: QP
 
-              #- NE:
-              #    - Quesa Brosa
-              #    - Chipotle (Broadway)
-              #    - Taco Bell (Broadway)
-              #    - Muchas Gracias (Broadway)
-              #    - Javier's (Lombard)
-              #    - Qdoba (Broadway)
-              #    - Azteca (Kenton Area)
-              #    - Los Gorditos (Killingsworth)
-              #    - ¿Por Qué No? (Mississippi)
-              #    - Taqueria El Tarasco (That cart on Killingsworth with the good quesadillas)
-              #    - Baja Fresh (Hollywood)
-              #    - Cha Cha Cha (Broadway)
-              #    - El Nutri Taco (Alberta)
-              #    - Taqueria Y Panaderia Santa Cruz ( St. Johns)
-              #    - Matador (Burnside)
-              #
-              #- SE:
-              #    - Los Gorditos (Division)
-              #    - Robo Taco (Morrison)
-              #    - Pepper Box (Morrison)
-              #    - ¿Por Qué No? (Hawthorne)
-              #    - Ole Ole (Burnside)
-              #    - Guero (28th)
-              #    - Que Pasa Cantina (12th) (via Colby)
-              #    - La Calaca Comelona (12th) (via Colby)
-              #    - Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
-              #    - Taqueria Portland (SE 8th Ave.) (via Colby)
-              #
-              #- SW:
-              #    - Taco Bell (Barbur)
-              #    - Jola
-              #    - Tito's Burritos (6th) (via E)
-              #    - Mayas Taqueria (Morrison) (via E)
-              #
-              #- Downtown:
-              #    - Santeria
-              #    - Los Gorditos (Davis)
-              #    - Mi Mero Mole
-              #    - Taco Bell (Burnside)
-
+                  #- NE:
+                  #    - Quesa Brosa
+                  #    - Chipotle (Broadway)
+                  #    - Taco Bell (Broadway)
+                  #    - Muchas Gracias (Broadway)
+                  #    - Javier's (Lombard)
+                  #    - Qdoba (Broadway)
+                  #    - Azteca (Kenton Area)
+                  #    - Los Gorditos (Killingsworth)
+                  #    - ¿Por Qué No? (Mississippi)
+                  #    - Taqueria El Tarasco (That cart on Killingsworth with the good quesadillas)
+                  #    - Baja Fresh (Hollywood)
+                  #    - Cha Cha Cha (Broadway)
+                  #    - El Nutri Taco (Alberta)
+                  #    - Taqueria Y Panaderia Santa Cruz ( St. Johns)
+                  #    - Matador (Burnside)
+                  #
+                  #- SE:
+                  #    - Los Gorditos (Division)
+                  #    - Robo Taco (Morrison)
+                  #    - Pepper Box (Morrison)
+                  #    - ¿Por Qué No? (Hawthorne)
+                  #    - Ole Ole (Burnside)
+                  #    - Guero (28th)
+                  #    - Que Pasa Cantina (12th) (via Colby)
+                  #    - La Calaca Comelona (12th) (via Colby)
+                  #    - Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
+                  #    - Taqueria Portland (SE 8th Ave.) (via Colby)
+                  #
+- SW:
+      - El Jalisco:
+            address: '8700-8726 SW Barbur Ct, Portland, OR 97219'
+            breakfast: true
+            speed: 3
+            price: 4
+            tasty: 5
+            heavy: 5
+            reviews:
+                - text: >
+                      Get the machaca or the mojado. Good price for a huge burrito.
+                  author: CQ
+                  #
+                  #- Downtown:
+                  #    - Santeria
+                  #    - Los Gorditos (Davis)
+                  #    - Mi Mero Mole
+                  #    - Taco Bell (Burnside)
 
