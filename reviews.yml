@@ -260,6 +260,19 @@
                 pretty busy a lot of the time and the parking lot sucks. I don't think I have anything useful to
                 say other than that their nachos were alright, and they give you free chips.
 
+- SW:	
+    - El Jalisco:
+        address: "(8700-8726 SW Barbur Ct, Portland, OR 97219)"
+        breakfast: true
+        speed: 3
+        price: 4
+        tasty: 5
+        heavy: 5
+        reviews:
+          - author: CQ
+          - text: >
+                Get the machaca or the mojado. Good price for a huge burrito. Red sauce is the way to go.
+
 # - Taqueria Y Panaderia Santa Cruz ( St. Johns)
 
 - SE:
