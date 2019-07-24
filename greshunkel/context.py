@@ -1,6 +1,7 @@
 from greshunkel.build import POSTS_DIR
 from greshunkel.utils import parse_variable
 from greshunkel.slimdown import Slimdown
+from greshunkel.review_loader import ReviewLoader
 
 import subprocess
 from os import listdir
@@ -10,6 +11,16 @@ DEFAULT_LANGUAGE = "en"
 # Man I don't know leave me alone.
 BASE_CONTEXT = {
 }
+
+def build_review_context(default_context):
+    new_context = default_context
+    with open("reviews.yml") as reviews:
+        review_loader = ReviewLoader(reviews)
+        review_loader.process()
+        new_context['reviews'] = review_loader.reviews
+        new_context['regions'] = review_loader.regions
+
+    return new_context
 
 def build_blog_context(default_context):
     default_context['POSTS'] = []
@@ -60,7 +71,7 @@ def build_doc_context(default_context):
     versions.append("master")
 
     for version in versions:
-        print "Checking out {}".format(version)
+        print("Checking out {}".format(version))
         cmd = "cd OlegDB && git checkout {} &> /dev/null".format(version)
         subprocess.call(cmd, shell=True)
         headers = ["oleg.h", "defs.h"]
@@ -70,7 +81,7 @@ def build_doc_context(default_context):
             try:
                 oleg_header = open(header_file)
             except IOError as e:
-                print e
+                print(e)
                 continue
 
             docstring_special = ["DEFINE", "ENUM", "STRUCT", "DESCRIPTION",

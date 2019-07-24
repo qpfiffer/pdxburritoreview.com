@@ -1,7 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 from greshunkel.build import main
-from greshunkel.context import BASE_CONTEXT
+from greshunkel.context import build_review_context, BASE_CONTEXT
 
 if __name__ == '__main__':
-    main(BASE_CONTEXT)
+    bc = build_review_context(BASE_CONTEXT)
+    main(bc)

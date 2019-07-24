@@ -7,281 +7,281 @@
 #    * General review text
 
 - NW:
-    - El Diablito:
-        address: "(2335 NW 23rd Pl, Portland, OR 97210)"
-        speed: 3
-        price: 3
-        tasty: 4
-        heavy: 4
-        reviews:
+    - name: El Diablito
+      address: "(2335 NW 23rd Pl, Portland, OR 97210)"
+      speed: 3
+      price: 3
+      tasty: 4
+      heavy: 4
+      reviews:
+        - author: QP
+          text: >
+              A really solid option if you want a heavy burrito. They also have fantastic tortas.
+              Considering it's really one of the few places up in the NW Industrial, I really
+              recommend it. They also put these really good little potato pieces inside their
+              food and it's amazing.
+    - name: Angel's Taqueria
+      address: "2225 NW Wilson St, Portland, OR 97210"
+      speed: 4
+      price: 5
+      tasty: 2
+      heavy: 2
+      reviews:
           - author: QP
             text: >
-                A really solid option if you want a heavy burrito. They also have fantastic tortas.
-                Considering it's really one of the few places up in the NW Industrial, I really
-                recommend it. They also put these really good little potato pieces inside their
-                food and it's amazing.
-    - Angel's Taqueria:
-        address: "2225 NW Wilson St, Portland, OR 97210"
-        speed: 4
-        price: 5
-        tasty: 2
-        heavy: 2
-        reviews:
-            - author: QP
-              text: >
-                Another NW Industrial staple, it kind of sucks. I think I went there once and just
-                remember the burrito being kind of soggy and the sauce being kind of lame. Pale food,
-                standard red and green sauce, it's actually a cart with a bolted on facade. Real cheap
-                though!
-    - Burrito Bar:
-        address: "911 NW Hoyt St, Portland, OR 97209"
-        speed: 5
-        price: 3
-        tasty: 3
-        heavy: 3
-        reviews:
-            - author: QP
-              text: >
-                Pearl district average. The one thing that stood out, or what I really remember, is that
-                they have their process down really well. You go from tortilla to wrapped hot burrito very
-                quickly. The cart down near the OHSU area is (was? I'm not sure it's still there) was even
-                faster.
-    - NoBrakes Cafe:
-        address: "2170 NW Wilson St, Portland, OR 97210"
-        breakfast: true
-        speed: 3
-        price: 4
-        tasty: 5
-        heavy: 5
-        reviews:
+              Another NW Industrial staple, it kind of sucks. I think I went there once and just
+              remember the burrito being kind of soggy and the sauce being kind of lame. Pale food,
+              standard red and green sauce, it's actually a cart with a bolted on facade. Real cheap
+              though!
+    - name: Burrito Bar
+      address: "911 NW Hoyt St, Portland, OR 97209"
+      speed: 5
+      price: 3
+      tasty: 3
+      heavy: 3
+      reviews:
           - author: QP
             text: >
-                This cart moves around and is more of a coffee thing, but they have an incredibly good
-                brisket burrito that is fantastic. Heavy as hell but very tasty. Slightly more expensive
-                than your standard burrito.
+              Pearl district average. The one thing that stood out, or what I really remember, is that
+              they have their process down really well. You go from tortilla to wrapped hot burrito very
+              quickly. The cart down near the OHSU area is (was? I'm not sure it's still there) was even
+              faster.
+    - name: NoBrakes Cafe
+      address: "2170 NW Wilson St, Portland, OR 97210"
+      breakfast: true
+      speed: 3
+      price: 4
+      tasty: 5
+      heavy: 5
+      reviews:
+        - author: QP
+          text: >
+              This cart moves around and is more of a coffee thing, but they have an incredibly good
+              brisket burrito that is fantastic. Heavy as hell but very tasty. Slightly more expensive
+              than your standard burrito.
 
 - NE:
-    - Quesabrosa:
-        address: "3954 N Williams Ave, Portland, OR 97227"
-        breakfast: false
-        speed: 3
-        price: 3
-        tasty: 5
-        heavy: 5
-        reviews:
-         - author: QP
-           text: >
-               I like this place mostly because of it's location, but what really
-               sold me is eventually the woman behind the counter learned my name
-               and it was really nice. Their burrito is heavy as hell and a little
+    - name: Quesabrosa
+      address: "3954 N Williams Ave, Portland, OR 97227"
+      breakfast: false
+      speed: 3
+      price: 3
+      tasty: 5
+      heavy: 5
+      reviews:
+       - author: QP
+         text: >
+             I like this place mostly because of it's location, but what really
+             sold me is eventually the woman behind the counter learned my name
+             and it was really nice. Their burrito is heavy as hell and a little
                oily, but fantastic. They recommend their carnitas.
-    - Chipotle:
-        address: "704 NE Weidler St, Portland, OR 97232"
-        breakfast: false
-        speed: 5
-        price: 4
-        tasty: 4
-        heavy: 2
-        reviews:
-          - author: QP
-            text: >
-                It's a Chipotle, and part of the fast-food mexican mini-mall on Broadway. Remember,
-                guac is free if you eat veggie, and if you spend enough dollars to accrue 1250 points
-                (about 17 $7.25 veggie burritos) you get a free one. Nice!
-    - Taco Bell (Broadway):
-        address: "725 NE Weidler St, Portland, OR 97232"
-        breakfast: false
-        speed: 3
-        price: 5
-        tasty: 5
-        heavy: 3
-        reviews:
-          - author: QP
-            text: >
-                Taco Bell. Also part of the fast-food mexican mini-mall. This one is sketchy as shit though,
-                and it seems to always be weirdly chipper teenagers behind the counter. This is a solid B-team
-                location, nut nowhere near as bad as the one out on Barbur. I've only ever really gotten the
-                Bean and Rice burritos here, so good luck. Good place to start a ride.
-    - Taco Bell (Interstate):
-        address: "4616 N Interstate Ave, Portland, OR 97217"
-        breakfast: false
-        speed: 4
-        price: 5
-        tasty: 5
-        heavy: 3
-        reviews:
-          - author: QP
-            text: >
-                Taco Bell. I think this is one of the better ones in PDX, as it's a little farther away from weird
-                homeless activity. It's right near the entrance to Swan Island so you can go eat your burrito at a
-                superfund site if you really want to. This one seems to be slightly faster than the others.
-    - Muchas Gracias:
-        address: "707 NE Weidler St, Portland, OR 97232"
-        breakfast: false
-        speed: 5
-        price: 5
-        tasty: 5
-        heavy: 2
-        reviews:
-          - author: QP
-            text: >
-                This place is amazing, and another staple in the fast-food mexican mini-mall on Broadway. I don't
-                know why I avoided this place for so long, it's amazing. You can get a single vegetarian burrito
-                with guac and cheese for $4.89. HOT DAMN. Get two! They're fast and crazy nice. It feels scummy
-                from the outside, like Javier's or Ole Ole, but it's rad in there. One time I went in and there
-                was just one woman standing behind the counter in like 2 inches of water and she didn't skip a
-                beat. Muchas Gracias is dank/10. They're also open until 4AM, seven days a week.
-    - Javier's Tacos:
-        address: "121 N Lombard St, Portland, OR 97217"
-        breakfast: false
-        speed: 4
-        price: 5
-        tasty: 5
-        heavy: 2
-        reviews:
-          - author: QP
-            text: >
-                Google's current photos for the place describe it pretty perfectly: sad looking chairs sitting around
-                two tables pushed together and a pale-orange, flourescent hellscape. Super cheap. This place is open until 3AM and
-                right off Lombard, so it's great for car thieves and truckers. You'll see all sorts of people there. I
-                actually usually get the tacos, which are slightly larger than street size and covered in cheese, so
-                I don't really know how their burritos are. They have pretty good sauces and pickled stuff, too.
-    - Qdoba (Broadway):
-        address: "825 NE Weidler St, Portland, OR 97232"
-        breakfast: false
-        speed: 3
-        price: 3
-        tasty: 4
-        heavy: 3
-        reviews:
-          - author: QP
-            text: >
-                I'm not really a QDoba guy, and I've only been to this one twice. Part of the Broadway mexican
-                fast-food mini-mall. I think this is the gold-standard for perfectly average mexican food. The
-                burrito was not memorable and I think it's always dark inside for some reason.
-    - El Burrito Azteca:
-        address: "1942 N Rosa Parks Way, Portland, OR 97217"
-        breakfast: false
-        speed: 3
-        price: 5
-        tasty: 4
-        heavy: 3
-        reviews:
-          - author: QP
-            text: >
-                Azteca is rad. Theres also a bar next door. This is one of those pale-food-with-red-and-green-sauce places, like Javier's
-                and Muchas Gracias. That means it's HELLA CHEAP DOG! Get two burritos and feel like you won the lottery.
-    - Los Gorditos:
-        address: "902 N Killingsworth St, Portland, OR 97217"
-        breakfast: false
-        speed: 4
-        price: 3
-        tasty: 4
-        heavy: 4
-        reviews:
-          - author: QP
-            text: >
-                Los Gorditos. Good orange sauce. Good burritos. Lots of vegan/veggie options. I think this one
-                doesn't shine quite as brightly as the Division and Downtown locations. Still good. The
-                garbage burrito is fantastic.
-    - ¿Por Qué No?:
-        address: "3524 N Mississippi Ave, Portland, OR 97227"
-        breakfast: false
-        speed: 0
-        price: 2
-        tasty: 3
-        heavy: 4
-        reviews:
-          - author: QP
-            text: >
-                Too cool for school. I think I've only gotten bowls here. The line outside that never ends is intimidating.
-                Not worth it. Call ahead to skip the line, guys!
-    - Taqueria El Tarasco:
-        address: "1032 N Killingsworth St, Portland, OR 97217"
-        breakfast: false
-        speed: 4
-        price: 3
-        tasty: 5
-        heavy: 2
-        reviews:
-          - author: QP
-            text: >
-                Don't sleep on this cart just because you're close to Los G's and the highway, they have really
-                good quesadillas here, and their sauces are hot.
-    - Baja Fresh:
-        address: "1505 NE 40th Ave, Portland, OR 97232"
-        breakfast: false
-        speed: 3
-        price: 3
-        tasty: 5
-        heavy: 2
-        reviews:
-          - author: QP
-            text: >
-                Baja Fresh has really good burritos somehow, but they like to put their razor sharp tortilla chips
-                in them so be warned.
-    - Cha Cha Cha Mexican Taqueria:
-        address: "2635 Northeast Broadway Street ste 1 ste 1, Portland, OR 97232"
-        breakfast: false
-        speed: 3
-        price: 3
-        tasty: 4
-        heavy: 4
-        reviews:
-          - author: QP
-            text: >
-                They do tacos here and their rigid stance on using only GIANT FANS when it's REALLY HOT outside
-                is refreshing in a world where you could literally walk across the street to Fred Meyer's to buy
-                an air conditioner. Not bad tacos, lots of options other that the standard Al Pastor/Carnitas/Chicken.
-    - El Nutri Taco:
-        address: "2124 NE Alberta St, Portland, OR 97211"
-        breakfast: false
-        speed: 4
-        price: 3
-        tasty: 5
-        heavy: 3
-        reviews:
-          - author: QP
-            text: >
-                Solid burritos with good vegan/veggie options. They like to touch up the spice. It's on alberta so
-                you can stand in line to get Ice Cream afterwards, too.
-    - Matador (Burnside):
-        address: "2424 E Burnside St, Portland, OR 97214"
-        breakfast: false
-        speed: 1
-        price: 2
-        tasty: 4
-        heavy: 4
-        reviews:
-          - author: QP
-            text: >
-                I don't really like this place, it's more of a bar that happens to serve food, and everyone thinks
-                it's a food place that serves mezcal. They have a skull in their logo so that's pretty cool. They're
-                pretty busy a lot of the time and the parking lot sucks. I don't think I have anything useful to
-                say other than that their nachos were alright, and they give you free chips.
+    - name: Chipotle
+      address: "704 NE Weidler St, Portland, OR 97232"
+      breakfast: false
+      speed: 5
+      price: 4
+      tasty: 4
+      heavy: 2
+      reviews:
+        - author: QP
+          text: >
+              It's a Chipotle, and part of the fast-food mexican mini-mall on Broadway. Remember,
+              guac is free if you eat veggie, and if you spend enough dollars to accrue 1250 points
+              (about 17 $7.25 veggie burritos) you get a free one. Nice!
+    - name: Taco Bell (Broadway)
+      address: "725 NE Weidler St, Portland, OR 97232"
+      breakfast: false
+      speed: 3
+      price: 5
+      tasty: 5
+      heavy: 3
+      reviews:
+        - author: QP
+          text: >
+              Taco Bell. Also part of the fast-food mexican mini-mall. This one is sketchy as shit though,
+              and it seems to always be weirdly chipper teenagers behind the counter. This is a solid B-team
+              location, nut nowhere near as bad as the one out on Barbur. I've only ever really gotten the
+              Bean and Rice burritos here, so good luck. Good place to start a ride.
+    - name: Taco Bell (Interstate)
+      address: "4616 N Interstate Ave, Portland, OR 97217"
+      breakfast: false
+      speed: 4
+      price: 5
+      tasty: 5
+      heavy: 3
+      reviews:
+        - author: QP
+          text: >
+              Taco Bell. I think this is one of the better ones in PDX, as it's a little farther away from weird
+              homeless activity. It's right near the entrance to Swan Island so you can go eat your burrito at a
+              superfund site if you really want to. This one seems to be slightly faster than the others.
+    - name: Muchas Gracias
+      address: "707 NE Weidler St, Portland, OR 97232"
+      breakfast: false
+      speed: 5
+      price: 5
+      tasty: 5
+      heavy: 2
+      reviews:
+        - author: QP
+          text: >
+              This place is amazing, and another staple in the fast-food mexican mini-mall on Broadway. I don't
+              know why I avoided this place for so long, it's amazing. You can get a single vegetarian burrito
+              with guac and cheese for $4.89. HOT DAMN. Get two! They're fast and crazy nice. It feels scummy
+              from the outside, like Javier's or Ole Ole, but it's rad in there. One time I went in and there
+              was just one woman standing behind the counter in like 2 inches of water and she didn't skip a
+              beat. Muchas Gracias is dank/10. They're also open until 4AM, seven days a week.
+    - name: Javier's Tacos
+      address: "121 N Lombard St, Portland, OR 97217"
+      breakfast: false
+      speed: 4
+      price: 5
+      tasty: 5
+      heavy: 2
+      reviews:
+        - author: QP
+          text: >
+              Google's current photos for the place describe it pretty perfectly: sad looking chairs sitting around
+              two tables pushed together and a pale-orange, flourescent hellscape. Super cheap. This place is open until 3AM and
+              right off Lombard, so it's great for car thieves and truckers. You'll see all sorts of people there. I
+              actually usually get the tacos, which are slightly larger than street size and covered in cheese, so
+              I don't really know how their burritos are. They have pretty good sauces and pickled stuff, too.
+    - name: Qdoba (Broadway)
+      address: "825 NE Weidler St, Portland, OR 97232"
+      breakfast: false
+      speed: 3
+      price: 3
+      tasty: 4
+      heavy: 3
+      reviews:
+        - author: QP
+          text: >
+              I'm not really a QDoba guy, and I've only been to this one twice. Part of the Broadway mexican
+              fast-food mini-mall. I think this is the gold-standard for perfectly average mexican food. The
+              burrito was not memorable and I think it's always dark inside for some reason.
+    - name: El Burrito Azteca
+      address: "1942 N Rosa Parks Way, Portland, OR 97217"
+      breakfast: false
+      speed: 3
+      price: 5
+      tasty: 4
+      heavy: 3
+      reviews:
+        - author: QP
+          text: >
+              Azteca is rad. Theres also a bar next door. This is one of those pale-food-with-red-and-green-sauce places, like Javier's
+              and Muchas Gracias. That means it's HELLA CHEAP DOG! Get two burritos and feel like you won the lottery.
+    - name: Los Gorditos
+      address: "902 N Killingsworth St, Portland, OR 97217"
+      breakfast: false
+      speed: 4
+      price: 3
+      tasty: 4
+      heavy: 4
+      reviews:
+        - author: QP
+          text: >
+              Los Gorditos. Good orange sauce. Good burritos. Lots of vegan/veggie options. I think this one
+              doesn't shine quite as brightly as the Division and Downtown locations. Still good. The
+              garbage burrito is fantastic.
+    - name: ¿Por Qué No?
+      address: "3524 N Mississippi Ave, Portland, OR 97227"
+      breakfast: false
+      speed: 0
+      price: 2
+      tasty: 3
+      heavy: 4
+      reviews:
+        - author: QP
+          text: >
+              Too cool for school. I think I've only gotten bowls here. The line outside that never ends is intimidating.
+              Not worth it. Call ahead to skip the line, guys!
+    - name: Taqueria El Tarasco
+      address: "1032 N Killingsworth St, Portland, OR 97217"
+      breakfast: false
+      speed: 4
+      price: 3
+      tasty: 5
+      heavy: 2
+      reviews:
+        - author: QP
+          text: >
+              Don't sleep on this cart just because you're close to Los G's and the highway, they have really
+              good quesadillas here, and their sauces are hot.
+    - name: Baja Fresh
+      address: "1505 NE 40th Ave, Portland, OR 97232"
+      breakfast: false
+      speed: 3
+      price: 3
+      tasty: 5
+      heavy: 2
+      reviews:
+        - author: QP
+          text: >
+              Baja Fresh has really good burritos somehow, but they like to put their razor sharp tortilla chips
+              in them so be warned.
+    - name: Cha Cha Cha Mexican Taqueria
+      address: "2635 Northeast Broadway Street ste 1 ste 1, Portland, OR 97232"
+      breakfast: false
+      speed: 3
+      price: 3
+      tasty: 4
+      heavy: 4
+      reviews:
+        - author: QP
+          text: >
+              They do tacos here and their rigid stance on using only GIANT FANS when it's REALLY HOT outside
+              is refreshing in a world where you could literally walk across the street to Fred Meyer's to buy
+              an air conditioner. Not bad tacos, lots of options other that the standard Al Pastor/Carnitas/Chicken.
+    - name: El Nutri Taco
+      address: "2124 NE Alberta St, Portland, OR 97211"
+      breakfast: false
+      speed: 4
+      price: 3
+      tasty: 5
+      heavy: 3
+      reviews:
+        - author: QP
+          text: >
+              Solid burritos with good vegan/veggie options. They like to touch up the spice. It's on alberta so
+              you can stand in line to get Ice Cream afterwards, too.
+    - name: Matador (Burnside)
+      address: "2424 E Burnside St, Portland, OR 97214"
+      breakfast: false
+      speed: 1
+      price: 2
+      tasty: 4
+      heavy: 4
+      reviews:
+        - author: QP
+          text: >
+              I don't really like this place, it's more of a bar that happens to serve food, and everyone thinks
+              it's a food place that serves mezcal. They have a skull in their logo so that's pretty cool. They're
+              pretty busy a lot of the time and the parking lot sucks. I don't think I have anything useful to
+              say other than that their nachos were alright, and they give you free chips.
 
 # - Taqueria Y Panaderia Santa Cruz ( St. Johns)
 
 - SE:
-   - Los Gorditos (Division)
-   - Robo Taco (Morrison)
-   - Pepper Box (Morrison)
-   - ¿Por Qué No? (Hawthorne)
-   - Ole Ole (Burnside)
-   - Guero (28th)
-   - Que Pasa Cantina (12th) (via Colby)
-   - La Calaca Comelona (12th) (via Colby)
-   - Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
-   - Taqueria Portland (SE 8th Ave.) (via Colby)
+   - name: Los Gorditos (Division)
+   - name: Robo Taco (Morrison)
+   - name: Pepper Box (Morrison)
+   - name: ¿Por Qué No? (Hawthorne)
+   - name: Ole Ole (Burnside)
+   - name: Guero (28th)
+   - name: Que Pasa Cantina (12th) (via Colby)
+   - name: La Calaca Comelona (12th) (via Colby)
+   - name: Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
+   - name: Taqueria Portland (SE 8th Ave.) (via Colby)
 
 - SW:
-   - Taco Bell (Barbur)
-   - Jola
-   - Tito's Burritos (6th) (via E)
-   - Mayas Taqueria (Morrison) (via E)
+   - name: Taco Bell (Barbur)
+   - name: Jola
+   - name: Tito's Burritos (6th) (via E)
+   - name: Mayas Taqueria (Morrison) (via E)
 
 - Downtown:
-   - Santeria
-   - Los Gorditos (Davis)
-   - Mi Mero Mole
-   - Taco Bell (Burnside)
+   - name: Santeria
+   - name: Los Gorditos (Davis)
+   - name: Mi Mero Mole
+   - name: Taco Bell (Burnside)
