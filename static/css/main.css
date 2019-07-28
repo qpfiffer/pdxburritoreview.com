@@ -7,11 +7,14 @@ body {
 	margin: 0 auto;
 }
 header {
+	flex: 1 1;
+	background-color: #FFF;
 	position: absolute;
 	display: block;
-	width: 250px;
-	height: 90%;
+	width: 300px;
+	height: 100%;
 	border-right: 1px solid #efefef;
+	top: 0;
 }
 header ul {
 	list-style-type: none;
@@ -42,5 +45,8 @@ section {
 	color: #777;
 }
 #map {
-	height: 640px;
+	height: 100%;
+	width: 100%;
+	position: absolute; top: 0; left: 0;
+	z-index: -10;
 }
