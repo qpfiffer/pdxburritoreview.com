@@ -50,3 +50,18 @@ section {
 	position: absolute; top: 0; left: 0;
 	z-index: -10;
 }
+header div.copyright {
+	padding-left: 1em;
+	font-size: 10px;
+	bottom: 0;
+	position: absolute;
+}
+header div.header {
+	margin: 0 auto;
+	width: 5em;
+	height: 5em;
+	background-image: url("/static/img/burrito.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	margin-top: 1em;
+}
