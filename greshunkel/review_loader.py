@@ -8,6 +8,7 @@ class ReviewLoader(object):
         self.raw_reviews = safe_load(reviews_file)
         self.reviews = []
         self.regions = self.raw_reviews
+        self.locations = []
 
     def write(self):
         os.makedirs(REVIEW_DIR, exist_ok=True)
@@ -19,4 +20,5 @@ class ReviewLoader(object):
             for region_str, all_stores in region.items():
                 for store in all_stores:
                     store['region'] = region_str
+                    self.locations.append(store)
         self.write()

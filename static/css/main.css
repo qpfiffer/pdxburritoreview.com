@@ -1,26 +1,10 @@
 /* vim: set ts=4 sw=4 noet : */
 html {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-	font-size: 18px;
+	font-size: 12px;
 }
 body {
 	margin: 0 auto;
-}
-header {
-	flex: 1 1;
-	background-color: #FFF;
-	position: absolute;
-	display: block;
-	width: 300px;
-	height: 100%;
-	border-right: 1px solid #efefef;
-	top: 0;
-}
-header ul {
-	list-style-type: none;
-}
-header ul li {
-	margin-bottom: 1em;
 }
 section {
 	margin-left: 260px;
@@ -40,23 +24,38 @@ section {
 	margin-bottom: 2em;
 	display: block;
 }
-.author_name {
-	font-size: 14px;
-	color: #777;
-}
 #map {
 	height: 100%;
 	width: 100%;
 	position: absolute; top: 0; left: 0;
 	z-index: -10;
 }
+header {
+	flex: 1 1;
+	background-color: #FFF;
+	position: absolute;
+	display: block;
+	width: 300px;
+	height: 100%;
+	border-right: 1px solid #efefef;
+	top: 0;
+	bottom: 0;
+	overflow-y: scroll;
+}
+header ul {
+	list-style-type: none;
+}
+header .header {
+	padding-left: 1em;
+}
+header ul li {
+	padding: 0;
+}
 header div.copyright {
 	padding-left: 1em;
 	font-size: 10px;
-	bottom: 0;
-	position: absolute;
 }
-header div.header {
+header div.header .header_img {
 	margin: 0 auto;
 	width: 5em;
 	height: 5em;

@@ -19,6 +19,7 @@ def build_review_context(default_context):
         review_loader.process()
         new_context['reviews'] = review_loader.reviews
         new_context['regions'] = review_loader.regions
+        new_context['LOCATIONS'] = review_loader.locations
 
     return new_context
 

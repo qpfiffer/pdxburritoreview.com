@@ -110,6 +110,7 @@ def _render_loop(loop_obj, context):
         if len(shattered_loops) != 1:
             # HACKIEST SHIT THAT EVER HACKED
             # TODO: If it ain't broke, don't fix it
+            print("PARAMS HACK!")
             context[shattered_loops[2]] = thing["params"]
             temp_loop_str = temp_loop_str + _render_loop(loop_obj["loop_subloop"], context)
             if shattered_loops[4] != "":
@@ -196,15 +197,15 @@ def parse_file(context, radical_file):
         if active_loops == 0 and reading_block is True and "xXx" not in stripped:
             block_str = block_str + line
         if active_loops > 0:
-            def recurse_bro(item):
+            def recurse_bro_2(item):
                 if item is not None:
                     if item["loop_depth"] <= active_loops:
                         if "xXx LOOP" in stripped and item["loop_depth"] != active_loops:
                             item["loop_str"] = item["loop_str"] + stripped
                         elif "xXx LOOP" not in stripped:
                             item["loop_str"] = item["loop_str"] + stripped
-                        recurse_bro(item["loop_subloop"])
-            recurse_bro(loop_stack)
+                        recurse_bro_2(item["loop_subloop"])
+            recurse_bro_2(loop_stack)
 
     return file_meta
 
