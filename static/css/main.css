@@ -73,3 +73,16 @@ header div.header .header_img {
 	background-size: contain;
 	margin-top: 1em;
 }
+.review_pane {
+	flex: 2 1;
+	background-color: #FFF;
+	position: absolute;
+	display: block;
+	width: 300px;
+	height: 100%;
+	border-left: 1px solid #efefef;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow-y: scroll;
+}

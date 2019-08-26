@@ -37,6 +37,11 @@
 			</header>
 		</div>
 		<div id="map"></div>
+		<template v-on:showReviewPane="showReviewPaneF" v-if="shouldShowReviewPane">
+			<div class="review_pane">
+				<h3>Name of place</h3>
+			<div>
+		</template>
 	</body>
 	<script type="text/javascript">
 		Vue.component('BurritoStoreLI', {
@@ -48,6 +53,7 @@
 					const latLngs = [ self.value.mapMarker.getLatLng() ];
 					const markerBounds = L.latLngBounds(latLngs);
 					self.map.fitBounds(markerBounds);
+					self.$emit('showReviewPane');
 				}
 			},
 			template: '<li><a v-on:click="onClick" href="#">{{value.name}}</a> </li>'
@@ -63,11 +69,15 @@
 					['SW', 'Southwest'],
 					['Downtown', 'Downtown'],
 				],
+				shouldShowReviewPane: false,
 				reviews: [],
 				map: null,
 				selectedUUID: null
 			},
 			methods: {
+				showReviewPaneF: function() {
+					this.shouldShowReviewPane = true;
+				},
 				addPoints: function() {
 					const self = this;
 					for (const key in self.reviews) {
