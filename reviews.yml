@@ -6,7 +6,7 @@
 #    * Breakfast burrito only
 #    * General review text
 
-- NW:
+NW:
   - address: (2335 NW 23rd Pl, Portland, OR 97210)
     heavy: 4
     lat: 45.539731
@@ -79,7 +79,7 @@
     speed: 3
     tasty: 5
     uuid: ee310b62-f8eb-4bca-ac34-2f791a0841be
-- NE:
+NE:
   - address: 3954 N Williams Ave, Portland, OR 97227
     breakfast: false
     heavy: 5
@@ -366,7 +366,7 @@
     speed: 1
     tasty: 4
     uuid: f1406e12-6d2f-40e2-af3a-7b2d261643fc
-- SW:
+SW:
   - address: (8700-8726 SW Barbur Ct, Portland, OR 97219)
     breakfast: true
     heavy: 5
@@ -384,7 +384,7 @@
     speed: 3
     tasty: 5
     uuid: 825e8308-43c1-4818-8910-938643810c5b
-- SE:
+SE:
   - name: Los Gorditos (Division)
     region: SE
     uuid: 465a643e-3c05-413b-a1ee-34194c089017
@@ -415,7 +415,7 @@
   - name: Taqueria Portland (SE 8th Ave.) (via Colby)
     region: SE
     uuid: e071e839-145d-4674-bf47-0a66644ea120
-- SW:
+SW:
   - name: Taco Bell (Barbur)
     region: SW
     uuid: 0400b3d3-c23e-4e39-9856-25910119c558
@@ -428,7 +428,7 @@
   - name: Mayas Taqueria (Morrison) (via E)
     region: SW
     uuid: 5e1e64eb-02f6-418f-b605-75ad03d7a3cd
-- Downtown:
+Downtown:
   - name: Santeria
     region: Downtown
     uuid: a17585d7-444b-4f1c-845d-2c46a507e437

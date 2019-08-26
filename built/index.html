@@ -9,7 +9,8 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8">
 		<link type="text/css" rel="stylesheet" href="/static/css/main.css" >
 
-		    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+		    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
     <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
@@ -19,45 +20,104 @@
 
 	</head>
 	<body>
-		<header>
-			    <!-- <ul>
-        <li><a href="/">THE MAP</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-    </ul>
-    -->
-    <div class="header">
-        <div class="header_img"></div>
-        <p>Places:</p>
-        <ul>
-<li>El Diablito</li><li>Angel's Taqueria</li><li>Burrito Bar</li><li>NoBrakes Cafe</li><li>Quesabrosa</li><li>Chipotle</li><li>Taco Bell (Broadway)</li><li>Taco Bell (Interstate)</li><li>Muchas Gracias</li><li>Javier's Tacos</li><li>Qdoba (Broadway)</li><li>El Burrito Azteca</li><li>Los Gorditos</li><li>¿Por Qué No?</li><li>Taqueria El Tarasco</li><li>Baja Fresh</li><li>Cha Cha Cha Mexican Taqueria</li><li>El Nutri Taco</li><li>Matador (Burnside)</li><li>El Jalisco</li><li>Los Gorditos (Division)</li><li>Robo Taco (Morrison)</li><li>Pepper Box (Morrison)</li><li>¿Por Qué No? (Hawthorne)</li><li>Ole Ole (Burnside)</li><li>Guero (28th)</li><li>Que Pasa Cantina (12th) (via Colby)</li><li>La Calaca Comelona (12th) (via Colby)</li><li>Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)</li><li>Taqueria Portland (SE 8th Ave.) (via Colby)</li><li>Taco Bell (Barbur)</li><li>Jola</li><li>Tito's Burritos (6th) (via E)</li><li>Mayas Taqueria (Morrison) (via E)</li><li>Santeria</li><li>Los Gorditos (Davis)</li><li>Mi Mero Mole</li><li>Taco Bell (Burnside)</li>        </ul>
-        <div class="copyright">
-            <p>Burrito by Denis Sazhin from the Noun Project</p>
-            <p>© Copyright 2019 <a href="http://q.pfiffer.org/">Quinlan Pfiffer</a></p>
-        </div>
-    </div>
-
-
-		</header>
-		<section id="title">
-			    <div id="map"></div>
-
-
-		</section>
+		<div id="app">
+			<header>
+				<div class="header">
+					<div class="header_img"></div>
+					<p v-if="loading">Loading...</p>
+					<div v-if="!loading">
+						<p>Neighborhoods</p>
+						<p>Northwest:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.NW">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Northeast:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.NE">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Southeast:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.SE">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Southwest:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.SW">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Downtown:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.Downtown">
+								{{ value.name }}
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>Burrito by Denis Sazhin from the Noun Project</p>
+					<p>© Copyright 2019 <a href="http://q.pfiffer.org/">Quinlan Pfiffer</a></p>
+				</div>
+			</header>
+		</div>
+		<div id="map"></div>
 	</body>
-	    <script type="text/javascript">
-        (function() {
-            var mymap = L.map('map').setView([45.5155, -122.6793], 13);
-            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                maxZoom: 18,
-                id: 'mapbox.streets',
-                accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
-            }).addTo(mymap);
-        })();
-    </script>
-
-
-	<footer>
-	</footer>
+	<script type="text/javascript">
+		(function() {
+		})();
+	</script>
+	<script type="text/javascript">
+		const app = new Vue({
+			el: "#app",
+			data: {
+				loading: true,
+				reviews: [],
+				map: null,
+				selectedUUID: null
+			},
+			methods: {
+				addPoints: function() {
+					const self = this;
+					for (const key in self.reviews) {
+						const region = self.reviews[key];
+						for (const store of region) {
+							if (store.lat && store.lng)
+								L.marker([store.lat, store.lng]).addTo(self.map);
+						}
+					}
+				},
+				load: function() {
+					const self = this;
+					fetch("/data/reviews.json").then(function(data) {
+						data.text().then(function(asText) {
+							const parsedData = JSON.parse(asText);
+							self.reviews = parsedData;
+							self.loading = false;
+							// Probably a race condition here waiting on map load, but whatever.
+							self.addPoints();
+						})
+					});
+				},
+				buildMap: function() {
+					const self = this;
+					self.map = L.map('map').setView([45.5155, -122.6793], 13);
+					L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+						attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+						maxZoom: 18,
+						id: 'mapbox.streets',
+						accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
+					}).addTo(self.map);
+				}
+			},
+			created: function() {
+				this.load();
+				this.buildMap();
+			}
+		});
+	</script>
 </html>

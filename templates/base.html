@@ -10,14 +10,104 @@
 		xXx INCLUDES xXx
 	</head>
 	<body>
-		<header>
-			xXx HEADER xXx
-		</header>
-		<section id="title">
-			xXx ABOUT xXx
-		</section>
+		<div id="app">
+			<header>
+				<div class="header">
+					<div class="header_img"></div>
+					<p v-if="loading">Loading...</p>
+					<div v-if="!loading">
+						<p>Neighborhoods</p>
+						<p>Northwest:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.NW">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Northeast:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.NE">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Southeast:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.SE">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Southwest:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.SW">
+								{{ value.name }}
+							</li>
+						</ul>
+						<p>Downtown:</p>
+						<ul>
+							<li v-for="(value, key, index) in reviews.Downtown">
+								{{ value.name }}
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="copyright">
+					<p>Burrito by Denis Sazhin from the Noun Project</p>
+					<p>© Copyright 2019 <a href="http://q.pfiffer.org/">Quinlan Pfiffer</a></p>
+				</div>
+			</header>
+		</div>
+		<div id="map"></div>
 	</body>
-	xXx JS xXx
-	<footer>
-	</footer>
+	<script type="text/javascript">
+		(function() {
+		})();
+	</script>
+	<script type="text/javascript">
+		const app = new Vue({
+			el: "#app",
+			data: {
+				loading: true,
+				reviews: [],
+				map: null,
+				selectedUUID: null
+			},
+			methods: {
+				addPoints: function() {
+					const self = this;
+					for (const key in self.reviews) {
+						const region = self.reviews[key];
+						for (const store of region) {
+							if (store.lat && store.lng)
+								L.marker([store.lat, store.lng]).addTo(self.map);
+						}
+					}
+				},
+				load: function() {
+					const self = this;
+					fetch("/data/reviews.json").then(function(data) {
+						data.text().then(function(asText) {
+							const parsedData = JSON.parse(asText);
+							self.reviews = parsedData;
+							self.loading = false;
+							// Probably a race condition here waiting on map load, but whatever.
+							self.addPoints();
+						})
+					});
+				},
+				buildMap: function() {
+					const self = this;
+					self.map = L.map('map').setView([45.5155, -122.6793], 13);
+					L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+						attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+						maxZoom: 18,
+						id: 'mapbox.streets',
+						accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
+					}).addTo(self.map);
+				}
+			},
+			created: function() {
+				this.load();
+				this.buildMap();
+			}
+		});
+	</script>
 </html>

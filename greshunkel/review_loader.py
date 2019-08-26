@@ -34,15 +34,14 @@ class ReviewLoader(object):
 
     def process(self):
         for region in self.raw_reviews:
-            for region_str, all_stores in region.items():
-                for store in all_stores:
-                    if 'uuid' not in store:
-                        store['uuid'] = str(uuid.uuid4())
-                    if ('lat' not in store or 'lng' not in store) and 'address' in store:
-                        lat, lng = self.geocode(store['address'])
-                        print("{}: {}, {}".format(store['address'], lat, lng))
-                        store['lat'] = lat
-                        store['lng'] = lng
-                    store['region'] = region_str
-                    self.locations.append(store)
+            for store in self.raw_reviews[region]:
+                if 'uuid' not in store:
+                    store['uuid'] = str(uuid.uuid4())
+                if ('lat' not in store or 'lng' not in store) and 'address' in store:
+                    lat, lng = self.geocode(store['address'])
+                    print("{}: {}, {}".format(store['address'], lat, lng))
+                    store['lat'] = lat
+                    store['lng'] = lng
+                store['region'] = region
+                self.locations.append(store)
         self.write()

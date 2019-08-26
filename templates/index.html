@@ -1,5 +1,6 @@
 xXx PARENT=templates/base.html xXx
 xXx INCLUDES xXx
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
        crossorigin=""/>
@@ -11,12 +12,6 @@ xXx TITLE xXx
     The Map
 xXx TTYL xXx
 xXx HEADER xXx
-    <!-- <ul>
-        <li><a href="/">THE MAP</a></li>
-        <li><a href="/about.html">About</a></li>
-        <li><a href="/contact.html">Contact</a></li>
-    </ul>
-    -->
     <div class="header">
         <div class="header_img"></div>
         <p>Places:</p>
@@ -25,25 +20,5 @@ xXx HEADER xXx
                 <li>xXx location$name xXx</li>
             xXx BBL xXx
         </ul>
-        <div class="copyright">
-            <p>Burrito by Denis Sazhin from the Noun Project</p>
-            <p>© Copyright 2019 <a href="http://q.pfiffer.org/">Quinlan Pfiffer</a></p>
-        </div>
     </div>
-xXx TTYL xXx
-xXx ABOUT xXx
-    <div id="map"></div>
-xXx TTYL xXx
-xXx JS xXx
-    <script type="text/javascript">
-        (function() {
-            var mymap = L.map('map').setView([45.5155, -122.6793], 13);
-            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-                maxZoom: 18,
-                id: 'mapbox.streets',
-                accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
-            }).addTo(mymap);
-        })();
-    </script>
 xXx TTYL xXx
