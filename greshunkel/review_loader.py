@@ -34,6 +34,8 @@ class ReviewLoader(object):
 
     def process(self):
         for region in self.raw_reviews:
+            new_list = sorted(self.raw_reviews[region], key=lambda k: k['name'])
+            self.raw_reviews[region] = new_list
             for store in self.raw_reviews[region]:
                 if 'uuid' not in store:
                     store['uuid'] = str(uuid.uuid4())

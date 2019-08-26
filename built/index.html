@@ -29,32 +29,42 @@
 						<p>Neighborhoods</p>
 						<p>Northwest:</p>
 						<ul>
-							<li v-for="(value, key, index) in reviews.NW">
-								{{ value.name }}
+							<li is="BurritoStoreLI"
+								v-bind:value="value"
+								v-for="(value, key) in reviews.NW"
+								:key="value.uuid">
 							</li>
 						</ul>
 						<p>Northeast:</p>
 						<ul>
-							<li v-for="(value, key, index) in reviews.NE">
-								{{ value.name }}
+							<li is="BurritoStoreLI"
+								v-bind:value="value"
+								v-for="(value, key) in reviews.NE"
+								:key="value.uuid">
 							</li>
 						</ul>
 						<p>Southeast:</p>
 						<ul>
-							<li v-for="(value, key, index) in reviews.SE">
-								{{ value.name }}
+							<li is="BurritoStoreLI"
+								v-bind:value="value"
+								v-for="(value, key) in reviews.SE"
+								:key="value.uuid">
 							</li>
 						</ul>
 						<p>Southwest:</p>
 						<ul>
-							<li v-for="(value, key, index) in reviews.SW">
-								{{ value.name }}
+							<li is="BurritoStoreLI"
+								v-bind:value="value"
+								v-for="(value, key) in reviews.SW"
+								:key="value.uuid">
 							</li>
 						</ul>
 						<p>Downtown:</p>
 						<ul>
-							<li v-for="(value, key, index) in reviews.Downtown">
-								{{ value.name }}
+							<li is="BurritoStoreLI"
+								v-bind:value="value"
+								v-for="(value, key) in reviews.Downtown"
+								:key="value.uuid">
 							</li>
 						</ul>
 					</div>
@@ -68,10 +78,10 @@
 		<div id="map"></div>
 	</body>
 	<script type="text/javascript">
-		(function() {
-		})();
-	</script>
-	<script type="text/javascript">
+		Vue.component('BurritoStoreLI', {
+			props: ['value'],
+			template: '<li>{{value.name}}</li>'
+		});
 		const app = new Vue({
 			el: "#app",
 			data: {
