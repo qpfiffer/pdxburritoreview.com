@@ -16,47 +16,18 @@
 					<div class="header_img"></div>
 					<p v-if="loading">Loading...</p>
 					<div v-if="!loading">
-						<p>Neighborhoods</p>
-						<p>Northwest:</p>
-						<ul>
-							<li is="BurritoStoreLI"
-								v-bind:value="value"
-								v-for="(value, key) in reviews.NW"
-								:key="value.uuid">
-							</li>
-						</ul>
-						<p>Northeast:</p>
-						<ul>
-							<li is="BurritoStoreLI"
-								v-bind:value="value"
-								v-for="(value, key) in reviews.NE"
-								:key="value.uuid">
-							</li>
-						</ul>
-						<p>Southeast:</p>
-						<ul>
-							<li is="BurritoStoreLI"
-								v-bind:value="value"
-								v-for="(value, key) in reviews.SE"
-								:key="value.uuid">
-							</li>
-						</ul>
-						<p>Southwest:</p>
-						<ul>
-							<li is="BurritoStoreLI"
-								v-bind:value="value"
-								v-for="(value, key) in reviews.SW"
-								:key="value.uuid">
-							</li>
-						</ul>
-						<p>Downtown:</p>
-						<ul>
-							<li is="BurritoStoreLI"
-								v-bind:value="value"
-								v-for="(value, key) in reviews.Downtown"
-								:key="value.uuid">
-							</li>
-						</ul>
+						<p>Eat burritos die young</p>
+						<div v-for="ngh in neighborhoods">
+							<p>{{ngh[1]}}</p>
+							<ul>
+								<li is="BurritoStoreLI"
+									v-bind:value="value"
+									v-bind:map="map"
+									v-for="(value, key) in reviews[ngh[0]]"
+									:key="value.uuid">
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 				<div class="copyright">
@@ -69,13 +40,29 @@
 	</body>
 	<script type="text/javascript">
 		Vue.component('BurritoStoreLI', {
-			props: ['value'],
-			template: '<li>{{value.name}}</li>'
+			props: ['map', 'value'],
+			methods: {
+				onClick: function(e) {
+					e.preventDefault();
+					const self = this;
+					const latLngs = [ self.value.mapMarker.getLatLng() ];
+					const markerBounds = L.latLngBounds(latLngs);
+					self.map.fitBounds(markerBounds);
+				}
+			},
+			template: '<li><a v-on:click="onClick" href="#">{{value.name}}</a> </li>'
 		});
 		const app = new Vue({
 			el: "#app",
 			data: {
 				loading: true,
+				neighborhoods: [
+					['NW', 'Northwest'],
+					['NE', 'Northeast'],
+					['SE', 'Southeast'],
+					['SW', 'Southwest'],
+					['Downtown', 'Downtown'],
+				],
 				reviews: [],
 				map: null,
 				selectedUUID: null
@@ -85,9 +72,9 @@
 					const self = this;
 					for (const key in self.reviews) {
 						const region = self.reviews[key];
-						for (const store of region) {
+						for (let store of region) {
 							if (store.lat && store.lng)
-								L.marker([store.lat, store.lng]).addTo(self.map);
+								store.mapMarker = L.marker([store.lat, store.lng]).addTo(self.map);
 						}
 					}
 				},

@@ -11,6 +11,15 @@ section {
 	margin-bottom: 6em;
 	width: 700px;
 }
+a {
+	color: #408FEC;
+	text-decoration: none;
+	transition: color 0.1s linear;
+}
+a:hover {
+	color: #105090;
+	text-decoration: underline;
+}
 #title {
 	margin-bottom: 4em;
 }
