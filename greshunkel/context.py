@@ -14,13 +14,15 @@ BASE_CONTEXT = {
 
 def build_review_context(default_context):
     new_context = default_context
+    outfile = open("reviews_processed.yml", "w")
     with open("reviews.yml") as reviews:
-        review_loader = ReviewLoader(reviews)
+        review_loader = ReviewLoader(reviews, outfile)
         review_loader.process()
         new_context['reviews'] = review_loader.reviews
         new_context['regions'] = review_loader.regions
-        new_context['LOCATIONS'] = review_loader.locations
+        new_context['locations'] = review_loader.locations
 
+    outfile.close()
     return new_context
 
 def build_blog_context(default_context):
