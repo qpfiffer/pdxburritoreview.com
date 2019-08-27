@@ -80,6 +80,23 @@ NW:
     tasty: 5
     uuid: ee310b62-f8eb-4bca-ac34-2f791a0841be
 NE:
+- address: 3535 NE 15th Ave, Portland, OR 97212
+  breakfast: true
+  heavy: 5
+  lat: 45.548904
+  lng: -122.651145
+  name: Q's House
+  price: 5
+  region: NE
+  reviews:
+  - author: QP
+    text: 'I make breakfast burritos for myself and my girlfriend pretty often. They''re
+      really good. No you can''t have any.
+
+      '
+  speed: 3
+  tasty: 5
+  uuid: f65c28b5-19aa-4786-bf57-76b75867db57
   - address: 3954 N Williams Ave, Portland, OR 97227
     breakfast: false
     heavy: 5
