@@ -37,26 +37,47 @@
 			</header>
 		</div>
 		<div id="map"></div>
-		<template v-on:showReviewPane="showReviewPaneF" v-if="shouldShowReviewPane">
-			<div class="review_pane">
-				<h3>Name of place</h3>
-			<div>
-		</template>
+		<ReviewPane v-bind:shouldShowReviewPane="shouldShowReviewPane"></ReviewPane>
 	</body>
 	<script type="text/javascript">
+		Vue.component('ReviewPane', {
+			props: ['shouldShowReviewPane'],
+			methods: {
+				showReviewPaneF: function() {
+					console.log("Called showReviewPaneF");
+					this.shouldShowReviewPane = true;
+				},
+			},
+			data: function() {
+				return {
+				}
+			},
+			template:
+				`<div v-if="!shouldShowReviewPane" v-on:show-review-pane="showReviewPaneF" class="review_pane">
+					<h3>Name of place</h3>
+				<div>`
+		});
 		Vue.component('BurritoStoreLI', {
 			props: ['map', 'value'],
+			data: function() {
+				return {
+					isActive: false,
+				}
+			},
 			methods: {
+				setActive: function(val) { if (val === false) { console.log("DEACTIVATED"); } this.isActive = val; },
 				onClick: function(e) {
 					e.preventDefault();
 					const self = this;
 					const latLngs = [ self.value.mapMarker.getLatLng() ];
 					const markerBounds = L.latLngBounds(latLngs);
 					self.map.fitBounds(markerBounds);
-					self.$emit('showReviewPane');
+					self.$emit('show-review-pane');
+					self.$emit('deactivate');
+					self.setActive(true);
 				}
 			},
-			template: '<li><a v-on:click="onClick" href="#">{{value.name}}</a> </li>'
+			template: '<li v-on:deactivate="setActive(false)" class="location"><a v-bind:class="{active: isActive}" v-on:click="onClick" href="#">{{value.name}}</a> </li>'
 		});
 		const app = new Vue({
 			el: "#app",
@@ -75,9 +96,6 @@
 				selectedUUID: null
 			},
 			methods: {
-				showReviewPaneF: function() {
-					this.shouldShowReviewPane = true;
-				},
 				addPoints: function() {
 					const self = this;
 					for (const key in self.reviews) {

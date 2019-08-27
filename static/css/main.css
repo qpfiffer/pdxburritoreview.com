@@ -86,3 +86,6 @@ header div.header .header_img {
 	bottom: 0;
 	overflow-y: scroll;
 }
+li.location > a.active {
+	color: #FF4742;
+}
