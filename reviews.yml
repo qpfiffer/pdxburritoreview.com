@@ -366,6 +366,186 @@ NE:
     speed: 1
     tasty: 4
     uuid: f1406e12-6d2f-40e2-af3a-7b2d261643fc
+SE:
+- address: 200 NE 28th Ave, Portland, OR 97232
+  breakfast: false
+  heavy: 2
+  lat: 45.524478
+  lng: -122.636958
+  name: "G\xFCero"
+  price: 2
+  region: SE
+  reviews:
+  - author: QP
+    text: 'I''m not sure they even have burritos here, but they have a *really* good
+      bowl, and their tortas are pretty good too. It''s a nice healthy, mexican-ish
+      option. Tastes amazing. The habenero sauce is incredible.
+
+      '
+  speed: 3
+  tasty: 5
+  uuid: d8e1f454-4027-4a21-bb0c-c5725a99c422
+- address: 2304 SE Belmont St, Portland, OR 97214
+  breakfast: false
+  heavy: 0
+  lat: 45.516232
+  lng: -122.642201
+  name: La Calaca Comelona (12th) (via Colby)
+  price: 0
+  region: SE
+  reviews:
+  - author: CO
+    text: 'I haven''t finished my review yet because I''m a big baby.
+
+      '
+  speed: 0
+  tasty: 0
+  uuid: 0f215788-21ab-41a8-b69a-9987abace58f
+- address: 1212 SE Division St, Portland, OR 97206
+  breakfast: false
+  heavy: 4
+  lat: 45.504633
+  lng: -122.653421
+  name: Los Gorditos
+  price: 3
+  region: SE
+  reviews:
+  - author: QP
+    text: 'Los Gorditos, it''s the same as the other ones. The orange sauce is really
+      good, the burritos are huge and they have really good options for vegans and
+      vegetarians. This one shares a fence with Apex, so if you''re trying to eat
+      a burrito and drink some cash-only beer this is a good option. They''ll even
+      bring your stuff over to you.
+
+      '
+  speed: 4
+  tasty: 4
+  uuid: 465a643e-3c05-413b-a1ee-34194c089017
+- address: 2137 E Burnside St, Portland, OR 97214
+  breakfast: false
+  heavy: 4
+  lat: 45.523109
+  lng: -122.643772
+  name: "Ol\xE9 Ol\xE9"
+  price: 5
+  region: SE
+  reviews:
+  - author: QP
+    text: 'If you want dead-cheap, comes-in-a-greasy-paper-bag mexican food, this
+      is the place. They''re cash only. I ate here almost every day for at least a
+      year. It is not good food, but is is fast and entirely reasonable. If I try
+      really hard I can still smell it.
+
+      '
+  speed: 5
+  tasty: 2
+  uuid: 417326dd-068d-4141-a613-3dbb85bf7603
+- address: 932 SE Morrison St, Portland, OR 97214
+  breakfast: false
+  heavy: 2
+  lat: 45.516975
+  lng: -122.655986
+  name: Pepper Box
+  price: 2
+  region: SE
+  reviews:
+  - author: QP
+    text: 'I love Pepper Box. I''ve only ever had the farmer''s breakfast tacos, though.
+      The coffee is retty solid, too. They sometimes refuse to buy avocados if they''re
+      priced to high, and then don''t give yo ua discount. I''M PAYING FOR AVOCADO,
+      COME ON! This place is fast, mid-priced and in a nice location.
+
+      '
+  speed: 4
+  tasty: 5
+  uuid: 250c8b4f-c27e-4f39-831d-031d4dbe9683
+- address: 1408 SE 12th Ave, Portland, OR 97214
+  breakfast: false
+  heavy: 0
+  lat: 45.512705
+  lng: -122.65346
+  name: Que Pasa Cantina
+  price: 0
+  region: SE
+  reviews:
+  - author: CO
+    text: 'I haven''t finished my review yet because I''m a big baby.
+
+      '
+  speed: 0
+  tasty: 0
+  uuid: da3042c4-0569-45d4-998a-54baa3243e0f
+- address: 607 SE Morrison St, Portland, OR 97214
+  breakfast: false
+  heavy: 4
+  lat: 45.517474
+  lng: -122.659026
+  name: Robo Taco
+  price: 3
+  region: SE
+  reviews:
+  - author: QP
+    text: 'RoboTaco isn''t as good as it used to be, and they close earlier, and all
+      the cool people that worked there are gone too. It''s still a pretty good otion
+      though and I like their soyrizo. Avoid the crowd from Dig-a-pony on the weekends,
+      RoboTaco is better as a lunch spot. They also serve drinks if you''re into that.
+
+      '
+  speed: 3
+  tasty: 3
+  uuid: b716f2f2-4a15-4736-a2b9-2cbf21ebd70a
+- address: 24 SE 82nd Ave, Portland, OR 97216
+  breakfast: false
+  heavy: 0
+  lat: 45.522495
+  lng: -122.578733
+  name: Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
+  price: 0
+  region: SE
+  reviews:
+  - author: NT
+    text: 'I haven''t finished my review yet because I''m a big baby.
+
+      '
+  speed: 0
+  tasty: 0
+  uuid: 49ccc549-3aba-4d8d-a290-51631f2740e6
+- address: 820 SE 8th Ave, Portland, OR 97214
+  breakfast: false
+  heavy: 2
+  lat: 45.516842
+  lng: -122.657197
+  name: Taqueria Portland (SE 8th Ave.) (via Colby)
+  price: 4
+  region: SE
+  reviews:
+  - author: QP
+    text: 'I''ve only eaten here once, and all I really remember about it is that
+      I burned my tongue or the roof of my mouth or something. The burritos are smothered
+      and come out RED HOT. Not a bad place, I just usually go to RoboTaco instead.
+
+      '
+  speed: 4
+  tasty: 3
+  uuid: e071e839-145d-4674-bf47-0a66644ea120
+- address: 4635 SE Hawthorne Blvd, Portland, OR 97215
+  breakfast: false
+  heavy: 3
+  lat: 45.512263
+  lng: -122.614342
+  name: "\xBFPor Qu\xE9 No?"
+  price: 1
+  region: SE
+  reviews:
+  - author: QP
+    text: 'Pretty good but not worth the wait in line. I''ve only been to the one
+      on Mississippi, so I don''t know if this one is any better. I''ve yelled at
+      people standing in line while riding my bike though.
+
+      '
+  speed: 2
+  tasty: 4
+  uuid: bad676ca-1ed8-43da-b6e6-181dadb79d5a
 SW:
   - address: (8700-8726 SW Barbur Ct, Portland, OR 97219)
     breakfast: true
@@ -384,38 +564,6 @@ SW:
     speed: 3
     tasty: 5
     uuid: 825e8308-43c1-4818-8910-938643810c5b
-SE:
-  - name: Los Gorditos (Division)
-    region: SE
-    uuid: 465a643e-3c05-413b-a1ee-34194c089017
-  - name: Robo Taco (Morrison)
-    region: SE
-    uuid: b716f2f2-4a15-4736-a2b9-2cbf21ebd70a
-  - name: Pepper Box (Morrison)
-    region: SE
-    uuid: 250c8b4f-c27e-4f39-831d-031d4dbe9683
-  - name: "\xBFPor Qu\xE9 No? (Hawthorne)"
-    region: SE
-    uuid: bad676ca-1ed8-43da-b6e6-181dadb79d5a
-  - name: Ole Ole (Burnside)
-    region: SE
-    uuid: 417326dd-068d-4141-a613-3dbb85bf7603
-  - name: Guero (28th)
-    region: SE
-    uuid: d8e1f454-4027-4a21-bb0c-c5725a99c422
-  - name: Que Pasa Cantina (12th) (via Colby)
-    region: SE
-    uuid: da3042c4-0569-45d4-998a-54baa3243e0f
-  - name: La Calaca Comelona (12th) (via Colby)
-    region: SE
-    uuid: 0f215788-21ab-41a8-b69a-9987abace58f
-  - name: Santa Cruz Taqueria (24 SE 82nd Ave, Portland, OR 97216)
-    region: SE
-    uuid: 49ccc549-3aba-4d8d-a290-51631f2740e6
-  - name: Taqueria Portland (SE 8th Ave.) (via Colby)
-    region: SE
-    uuid: e071e839-145d-4674-bf47-0a66644ea120
-SW:
   - name: Taco Bell (Barbur)
     region: SW
     uuid: 0400b3d3-c23e-4e39-9856-25910119c558
