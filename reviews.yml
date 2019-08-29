@@ -7,6 +7,24 @@
 #    * General review text
 
 NW:
+  - address: '2355 NW Vaughn St, Portland, OR 97210'
+    name: Groundwork Coffee Co.
+    breakfast: true
+    lat: 45.537248
+    lng: -122.700292
+    price: 3
+    heavy: 2
+    region: NW
+    reviews:
+    - author: QP
+      text: 'Groundwork has an amazing breakfast burrito. They used to only have these little
+      burrito "bite" things, which were good too, but they have a full kitchen now. It''s a really good,
+      enormously dense burrito. Comes with a little side salad, too. Would recommend. 10/10.
+
+      '
+    speed: 2
+    tasty: 5
+    uuid: f4847602-ca85-11e9-9880-93e5e8034f99
   - address: (2335 NW 23rd Pl, Portland, OR 97210)
     heavy: 4
     lat: 45.539731
@@ -80,23 +98,23 @@ NW:
     tasty: 5
     uuid: ee310b62-f8eb-4bca-ac34-2f791a0841be
 NE:
-- address: 3535 NE 15th Ave, Portland, OR 97212
-  breakfast: true
-  heavy: 5
-  lat: 45.548904
-  lng: -122.651145
-  name: Q's House
-  price: 5
-  region: NE
-  reviews:
-  - author: QP
-    text: 'I make breakfast burritos for myself and my girlfriend pretty often. They''re
-      really good. No you can''t have any.
-
-      '
-  speed: 3
-  tasty: 5
-  uuid: f65c28b5-19aa-4786-bf57-76b75867db57
+  - address: 3535 NE 15th Ave, Portland, OR 97212
+    breakfast: true
+    heavy: 5
+    lat: 45.548904
+    lng: -122.651145
+    name: Q's House
+    price: 5
+    region: NE
+    reviews:
+    - author: QP
+      text: 'I make breakfast burritos for myself and my girlfriend pretty often. They''re
+        really good. No you can''t have any.
+  
+        '
+    speed: 3
+    tasty: 5
+    uuid: f65c28b5-19aa-4786-bf57-76b75867db57
   - address: 3954 N Williams Ave, Portland, OR 97227
     breakfast: false
     heavy: 5
