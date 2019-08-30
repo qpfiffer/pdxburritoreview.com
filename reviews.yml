@@ -585,9 +585,9 @@ SE:
 - address: "Fersens v\xE4g 16, Malm\xF6, Sweden, 211 42"
   breakfast: false
   heavy: 2
-  lat: 37.25366
-  lng: -86.27886
-  name: Burrito Friends
+  lat: 55.5983445
+  lng: 12.9942558
+  name: Burritofriends
   price: 4
   region: "Malm\xF6"
   reviews:
