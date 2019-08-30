@@ -581,6 +581,21 @@ SE:
   speed: 2
   tasty: 4
   uuid: bad676ca-1ed8-43da-b6e6-181dadb79d5a
+- Malmö:
+    - Burrito Friends:
+        uuid: 6326ce5e-be76-455b-88ae-965dcd4807bc
+        address: "Fersens väg 16, Malmö, Sweden, 211 42"
+        breakfast: false
+        speed: 4
+        price: 4
+        tasty: 3
+        heavy: 2
+        reviews:
+         - author: cblgh
+           text: >
+               One of the only burrito places I know of in Sweden. Pretty decent all-rounder. What's extra good
+               is you can get a menu which includes some chips, froyo and lemonade for like 30 SEK extra.
+               Wide selection of fillings, tasted both the minced quorn and pulled oompf.
 SW:
   - address: (8700-8726 SW Barbur Ct, Portland, OR 97219)
     breakfast: true
