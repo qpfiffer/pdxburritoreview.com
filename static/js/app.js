@@ -2,6 +2,7 @@
 var store = {
 	state: {
 		shouldShowReviewPane: false,
+		activePlace: null,
 		activeReviewUUID: null
 	},
 	setShouldShowReviewPane (val) {
@@ -9,24 +10,39 @@ var store = {
 	},
 	setActiveReviewUUID (val) {
 		this.state.activeReviewUUID = val;
+	},
+	setActivePlace (val) {
+		this.state.activePlace = val;
 	}
 }
 
 Vue.component('ReviewPane', {
 	methods: {
-		showReviewPaneF: function() {
-			store.setShouldShowReviewPane(true);
+		showReviewPaneF(val) {
+			store.setShouldShowReviewPane(val);
+		},
+		isActive() {
+			return this.state.shouldShowReviewPane
 		},
 	},
 	data: function() {
 		const self = this;
 		return {
-			shouldShowReviewPane: store.state.shouldShowReviewPane
+			state: store.state
 		}
 	},
 	template:
-		`<div v-if="shouldShowReviewPane" v-on:show-review-pane="showReviewPaneF" class="review_pane">
-			 <h3>Name of place</h3>
+		`<div v-bind:class="{active: isActive()}" class="review_pane">
+			 <h2>{{ state.activePlace.name }}</h2>
+			 <code>{{ state.activePlace.address }}</code>
+			 <div class="horizontal_line"></div>
+			 <ul class="review_stars">
+			   <li>Breakfast Only</li>
+			   <li>Price</li>
+			   <li>Heavy</li>
+			   <li>Speed</li>
+			   <li>Tasty</li>
+			 </ul>
 		 </div>`
 });
 
@@ -40,7 +56,6 @@ Vue.component('BurritoStoreLI', {
 	},
 	methods: {
 		isActive() {
-			console.log("CHANGED")
 			return this.state.activeReviewUUID === this.value.uuid
 		},
 		onClick(e) {
@@ -51,8 +66,9 @@ Vue.component('BurritoStoreLI', {
 			self.map.fitBounds(markerBounds);
 
 			self.$emit('show-review-pane');
-			self.$emit('deactivate');
 			store.setActiveReviewUUID(self.value.uuid);
+			store.setShouldShowReviewPane(true);
+			store.setActivePlace(self.value);
 		}
 	},
 	template: `<li class="location">

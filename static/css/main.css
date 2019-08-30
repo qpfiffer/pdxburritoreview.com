@@ -74,18 +74,35 @@ header div.header .header_img {
 	margin-top: 1em;
 }
 .review_pane {
+	transition: .2s ease-in-out;
 	flex: 2 1;
 	background-color: #FFF;
 	position: absolute;
 	display: block;
-	width: 300px;
+	width: 30vw;
 	height: 100%;
 	border-left: 1px solid #efefef;
 	right: 0;
+	left: 100vw;
 	top: 0;
 	bottom: 0;
 	overflow-y: scroll;
+	padding-left: 1em;
+}
+.review_pane.active {
+	left: 70vw;
 }
 li.location > a.active {
 	color: #FF4742;
+}
+.review_pane .review_stars {
+	list-style: none;
+}
+.review_stars > li {
+	padding-bottom: 2em;
+}
+.review_pane .horizontal_line {
+	width: 95%;
+	padding-top: 2em;
+	border-bottom: 1px solid #efefef;
 }
