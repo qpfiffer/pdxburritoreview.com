@@ -2,7 +2,14 @@
 var store = {
 	state: {
 		shouldShowReviewPane: false,
-		activePlace: null,
+		activePlace: {
+			address: '',
+			name: '',
+			breakfast: '',
+			heavy: '',
+			price: '',
+			reviews: [],
+		},
 		activeReviewUUID: null
 	},
 	setShouldShowReviewPane (val) {
@@ -33,16 +40,19 @@ Vue.component('ReviewPane', {
 	},
 	template:
 		`<div v-bind:class="{active: isActive()}" class="review_pane">
+			 <a v-on:click="showReviewPaneF(false)" href="#" class="close"></a>
 			 <h2>{{ state.activePlace.name }}</h2>
 			 <code>{{ state.activePlace.address }}</code>
 			 <div class="horizontal_line"></div>
 			 <ul class="review_stars">
-			   <li>Breakfast Only</li>
-			   <li>Price</li>
-			   <li>Heavy</li>
-			   <li>Speed</li>
-			   <li>Tasty</li>
+			   <li>Breakfast Only: {{ state.activePlace.breakfast }}</li>
+			   <li>Price: <code>{{ state.activePlace.price }} / 5</code></li>
+			   <li>Heavy: <code>{{ state.activePlace.heavy }} / 5</code></li>
+			   <li>Speed: <code>{{ state.activePlace.speed }} / 5</code></li>
+			   <li>Tasty: <code>{{ state.activePlace.tasty }} / 5</code></li>
 			 </ul>
+			 <div class="horizontal_line"></div>
+			 <h3>Reviews</h3>
 		 </div>`
 });
 
@@ -61,11 +71,11 @@ Vue.component('BurritoStoreLI', {
 		onClick(e) {
 			e.preventDefault();
 			const self = this;
+
 			const latLngs = [ self.value.mapMarker.getLatLng() ];
 			const markerBounds = L.latLngBounds(latLngs);
 			self.map.fitBounds(markerBounds);
 
-			self.$emit('show-review-pane');
 			store.setActiveReviewUUID(self.value.uuid);
 			store.setShouldShowReviewPane(true);
 			store.setActivePlace(self.value);
@@ -96,8 +106,19 @@ const app = new Vue({
 			for (const key in self.reviews) {
 				const region = self.reviews[key];
 				for (let store of region) {
-					if (store.lat && store.lng)
-						store.mapMarker = L.marker([store.lat, store.lng]).addTo(self.map);
+					if (store.lat && store.lng) {
+						let marker = L.marker([store.lat, store.lng]);
+						marker.on('click', function() {
+							const latLngs = [ marker.getLatLng() ];
+							const markerBounds = L.latLngBounds(latLngs);
+							self.map.fitBounds(markerBounds);
+
+							store.setActiveReviewUUID(store.uuid);
+							store.setShouldShowReviewPane(true);
+							self.sharedState.setActivePlace(store);
+						});
+						store.mapMarker = marker.addTo(self.map);
+					}
 				}
 			}
 		},

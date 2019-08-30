@@ -97,12 +97,39 @@ li.location > a.active {
 }
 .review_pane .review_stars {
 	list-style: none;
+	margin-top: 2em;
+	margin-bottom: 0;
 }
 .review_stars > li {
-	padding-bottom: 2em;
+	padding-bottom: 0.5em;
 }
 .review_pane .horizontal_line {
 	width: 95%;
 	padding-top: 2em;
 	border-bottom: 1px solid #efefef;
+}
+.close {
+	position: absolute;
+	right: 16px;
+	top: 16px;
+	width: 16px;
+	height: 16px;
+	opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+  position: absolute;
+  left: 15px;
+  content: ' ';
+  height: 17px;
+  width: 2px;
+  background-color: #333;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
 }

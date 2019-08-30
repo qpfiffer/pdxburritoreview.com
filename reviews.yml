@@ -343,7 +343,7 @@ NE:
     speed: 3
     tasty: 5
     uuid: 1ebd4813-ccae-4baa-8032-cc6422dff431
-  - address: 2635 Northeast Broadway Street ste 1 ste 1, Portland, OR 97232
+  - address: 2635 Northeast Broadway Street ste 1, Portland, OR 97232
     breakfast: false
     heavy: 4
     lat: 45.53538
