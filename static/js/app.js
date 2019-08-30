@@ -53,6 +53,10 @@ Vue.component('ReviewPane', {
 			 </ul>
 			 <div class="horizontal_line"></div>
 			 <h3>Reviews</h3>
+			 <div v-for="review in state.activePlace.reviews" class="review">
+			   <p>{{ review.text }}</p>
+			   <p>- {{ review.author }}</p>
+			 </div>
 		 </div>`
 });
 
