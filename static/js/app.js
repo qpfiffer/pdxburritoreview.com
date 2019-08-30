@@ -107,14 +107,14 @@ const app = new Vue({
 				const region = self.reviews[key];
 				for (let store of region) {
 					if (store.lat && store.lng) {
-						let marker = L.marker([store.lat, store.lng]);
+						const latLngs = [store.lat, store.lng];
+						let marker = L.marker(latLngs);
 						marker.on('click', function() {
-							const latLngs = [ marker.getLatLng() ];
-							const markerBounds = L.latLngBounds(latLngs);
+							const markerBounds = L.latLngBounds([marker.getLatLng()]);
 							self.map.fitBounds(markerBounds);
 
-							store.setActiveReviewUUID(store.uuid);
-							store.setShouldShowReviewPane(true);
+							self.sharedState.setActiveReviewUUID(store.uuid);
+							self.sharedState.setShouldShowReviewPane(true);
 							self.sharedState.setActivePlace(store);
 						});
 						store.mapMarker = marker.addTo(self.map);
