@@ -98,6 +98,20 @@ NW:
     tasty: 5
     uuid: ee310b62-f8eb-4bca-ac34-2f791a0841be
 NE:
+  - address: Unnamed (Albina St.), Portland, OR 97212
+    breakfast: false
+    lat: 45.5563924
+    lng: -122.6775197
+    name: Rico's Burritos
+    region: NE
+    uuid: c96177c2-dfde-11e9-8000-4326ba65df33
+    reviews:
+      - author: QP
+        text: 'Stopped here for lunch and had the carnitas. It was solidly average. Pretty cheap, pretty fast.'
+    speed: 4
+    tasty: 3
+    price: 5
+    heavy: 2
   - address: 3535 NE 15th Ave, Portland, OR 97212
     breakfast: true
     heavy: 5
