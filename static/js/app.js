@@ -141,7 +141,7 @@ const app = new Vue({
 		buildMap: function() {
 			const self = this;
 			self.map = L.map('map').setView([45.5155, -122.6793], 13);
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', 
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
 				{attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
 			).addTo(self.map);
 			//L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
