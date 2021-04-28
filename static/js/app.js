@@ -141,12 +141,15 @@ const app = new Vue({
 		buildMap: function() {
 			const self = this;
 			self.map = L.map('map').setView([45.5155, -122.6793], 13);
-			L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-				attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-				maxZoom: 18,
-				id: 'mapbox.streets',
-				accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
-			}).addTo(self.map);
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?{foo}', 
+				{attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
+			).addTo(self.map);
+			//L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			//	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			//	maxZoom: 18,
+			//	id: 'mapbox.streets',
+			//	accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
+			//}).addTo(self.map);
 		}
 	},
 	created: function() {

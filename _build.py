@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from greshunkel.build import main
 from greshunkel.context import build_review_context, BASE_CONTEXT
