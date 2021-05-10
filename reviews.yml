@@ -616,7 +616,7 @@ SE:
   tasty: 3
   uuid: 6326ce5e-be76-455b-88ae-965dcd4807bc
 SW:
-  - address: (8700-8726 SW Barbur Ct, Portland, OR 97219)
+  - address: 8700-8726 SW Barbur Ct, Portland, OR 97219
     breakfast: true
     heavy: 5
     lat: 45.461623
@@ -646,8 +646,23 @@ SW:
     region: SW
     uuid: 5e1e64eb-02f6-418f-b605-75ad03d7a3cd
 Downtown:
-  - name: Santeria
+  - name: The Alchemist Tavern (Previously Santeria)
     region: Downtown
+    address: 703 SW Ankeny St, Portland, OR 97205
+    breakfast: true
+    heavy: 5
+    lat: 45.5226027
+    lng: -122.6781666
+    price: 4
+    reviews:
+    - author: QP
+      text: 'I dont know if theyre even still making burritos, but back
+      when they were Santeria, they were very good. Heavy and spicy and open
+      until 2 AM.
+
+      '
+    speed: 3
+    tasty: 5
     uuid: a17585d7-444b-4f1c-845d-2c46a507e437
   - name: Los Gorditos (Davis)
     region: Downtown
