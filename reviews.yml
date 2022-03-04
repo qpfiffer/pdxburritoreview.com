@@ -416,6 +416,22 @@ NE:
     tasty: 4
     uuid: f1406e12-6d2f-40e2-af3a-7b2d261643fc
 SE:
+- address: 438 SE Martin Luther King Jr Blvd, Portland, OR 97214
+  breakfast: false
+  heavy: 4
+  lat: 45.51962,
+  lng: -122.66154
+  name: "Pica Pica Grill"
+  price: 2
+  region: SE
+  reviews:
+  - author: nijotz
+    text: 'They grill outside every morning. Meat is always good, accoutrement
+    is basic. Heavy. Fast. They also let houseless slept under their patio at
+    night.'
+  speed: 5
+  tasty: 3
+  uuid: 24ea1bdb-edf4-4691-a043-06a9c060283a
 - address: 200 NE 28th Ave, Portland, OR 97232
   breakfast: false
   heavy: 2
