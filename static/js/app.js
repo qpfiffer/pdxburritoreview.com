@@ -23,7 +23,81 @@ var store = {
 	}
 }
 
-Vue.component('ReviewPane', {
+const app = Vue.createApp({
+	el: "#app",
+	data: function() {
+		let loading = true;
+		const neighborhoods = [
+			['NW', 'Northwest'],
+			['NE', 'Northeast'],
+			['SE', 'Southeast'],
+			['SW', 'Southwest'],
+			['Downtown', 'Downtown'],
+		];
+		const sharedState = store
+		const reviews = []
+		const map = null
+
+		return { loading, neighborhoods, sharedState, reviews, map}
+	},
+	methods: {
+		addPoints: function() {
+			const self = this;
+			for (const key in self.reviews) {
+				const region = self.reviews[key];
+				for (let store of region) {
+					if (store.lat && store.lng) {
+						const latLngs = [store.lat, store.lng];
+						let marker = L.marker(latLngs);
+						marker.on('click', function() {
+							const markerBounds = L.latLngBounds([marker.getLatLng()]);
+							self.map.fitBounds(markerBounds);
+
+							self.sharedState.setActiveReviewUUID(store.uuid);
+							self.sharedState.setShouldShowReviewPane(true);
+							self.sharedState.setActivePlace(store);
+						});
+						store.mapMarker = marker.addTo(self.map);
+					}
+				}
+			}
+		},
+		load: function() {
+			let self = this;
+			fetch("/data/reviews.json").then(function(data) {
+				data.text().then(function(asText) {
+					const parsedData = JSON.parse(asText);
+					self.reviews = parsedData;
+
+
+					self.loading = false;
+					// Probably a race condition here waiting on map load, but whatever.
+					self.addPoints();
+				})
+			});
+		},
+		buildMap: function() {
+			const self = this;
+			self.map = L.map('map').setView([45.5155, -122.6793], 13);
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
+				{attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
+			).addTo(self.map);
+			//L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			//	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+			//	maxZoom: 18,
+			//	id: 'mapbox.streets',
+			//	accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
+			//}).addTo(self.map);
+		}
+	},
+	created: function() {
+		this.load();
+		this.buildMap();
+	}
+});
+app.mount("#app");
+
+app.component('ReviewPane', {
 	methods: {
 		showReviewPaneF(val) {
 			store.setShouldShowReviewPane(val);
@@ -60,7 +134,7 @@ Vue.component('ReviewPane', {
 		 </div>`
 });
 
-Vue.component('BurritoStoreLI', {
+app.component('BurritoStoreLI', {
 	props: ['map', 'value'],
 	data: () => {
 		const self = this;
@@ -88,72 +162,4 @@ Vue.component('BurritoStoreLI', {
 	template: `<li class="location">
 							 <a v-bind:class="{active: isActive()}" v-on:click="onClick" href="#">{{value.name}}</a>
 						 </li>`
-});
-const app = new Vue({
-	el: "#app",
-	data: {
-		loading: true,
-		neighborhoods: [
-			['NW', 'Northwest'],
-			['NE', 'Northeast'],
-			['SE', 'Southeast'],
-			['SW', 'Southwest'],
-			['Downtown', 'Downtown'],
-		],
-		sharedState: store,
-		reviews: [],
-		map: null,
-	},
-	methods: {
-		addPoints: function() {
-			const self = this;
-			for (const key in self.reviews) {
-				const region = self.reviews[key];
-				for (let store of region) {
-					if (store.lat && store.lng) {
-						const latLngs = [store.lat, store.lng];
-						let marker = L.marker(latLngs);
-						marker.on('click', function() {
-							const markerBounds = L.latLngBounds([marker.getLatLng()]);
-							self.map.fitBounds(markerBounds);
-
-							self.sharedState.setActiveReviewUUID(store.uuid);
-							self.sharedState.setShouldShowReviewPane(true);
-							self.sharedState.setActivePlace(store);
-						});
-						store.mapMarker = marker.addTo(self.map);
-					}
-				}
-			}
-		},
-		load: function() {
-			const self = this;
-			fetch("/data/reviews.json").then(function(data) {
-				data.text().then(function(asText) {
-					const parsedData = JSON.parse(asText);
-					self.reviews = parsedData;
-					self.loading = false;
-					// Probably a race condition here waiting on map load, but whatever.
-					self.addPoints();
-				})
-			});
-		},
-		buildMap: function() {
-			const self = this;
-			self.map = L.map('map').setView([45.5155, -122.6793], 13);
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 
-				{attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}
-			).addTo(self.map);
-			//L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-			//	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-			//	maxZoom: 18,
-			//	id: 'mapbox.streets',
-			//	accessToken: 'pk.eyJ1IjoicXBmaWZmZXIiLCJhIjoiY2p4bWdobmphMDNvOTNicWhmbm9jaXJhNSJ9.W5lmNhX-Fdl1ejdoIhVmDg'
-			//}).addTo(self.map);
-		}
-	},
-	created: function() {
-		this.load();
-		this.buildMap();
-	}
 });
